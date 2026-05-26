@@ -520,6 +520,49 @@
         transition: color 0.3s;
       }
 
+      /* ── Who we are ── */
+      .who-we-are {
+        padding: 5rem 3rem;
+        border-bottom: 0.5px solid var(--border);
+        display: grid;
+        grid-template-columns: 1fr 1.6fr;
+        gap: 6rem;
+        transition: border-color 0.3s;
+      }
+      .wwa-title {
+        font-family: "Cormorant Garamond", Georgia, serif;
+        font-size: clamp(1.8rem, 2.8vw, 2.6rem);
+        font-weight: 300;
+        color: var(--text-primary);
+        line-height: 1.15;
+        transition: color 0.3s;
+      }
+      .wwa-body {
+        font-size: 0.92rem;
+        color: var(--text-mid);
+        line-height: 1.85;
+        transition: color 0.3s;
+      }
+      .wwa-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-top: 2rem;
+      }
+      .wwa-tag {
+        font-family: "DM Mono", monospace;
+        font-size: 0.62rem;
+        letter-spacing: 0.1em;
+        text-transform: lowercase;
+        color: var(--text-muted);
+        border: 0.5px solid var(--border-med);
+        padding: 0.3rem 0.75rem;
+        border-radius: 2px;
+        transition:
+          color 0.3s,
+          border-color 0.3s;
+      }
+
       /* ── Why different ── */
       .why {
         padding: 5rem 3rem;
@@ -905,6 +948,11 @@
         .profiles {
           grid-template-columns: 1fr;
         }
+        .who-we-are {
+          grid-template-columns: 1fr;
+          gap: 2rem;
+          padding: 3.5rem 1.5rem;
+        }
         .why {
           grid-template-columns: 1fr;
           gap: 2.5rem;
@@ -1217,6 +1265,37 @@
             push her own ideas forward, unblock her, and think through hard
             decisions.
           </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Who we are -->
+    <section class="who-we-are">
+      <div class="wwa-left">
+        <div class="section-label" style="margin-bottom: 1.5rem">
+          who we are
+        </div>
+        <h2 class="wwa-title">
+          Built by engineers.<br />Taught with intention.
+        </h2>
+      </div>
+      <div class="wwa-right">
+        <p class="wwa-body">
+          Built by engineers who have worked on production systems used by
+          Fortune 500 and high-growth technology companies.
+        </p>
+        <p class="wwa-body" style="margin-top: 1rem">
+          We bring that depth into every session. Our mentorship is not designed
+          to teach students how to pass a class — it is designed to develop the
+          kind of thinking that makes a real engineer.
+        </p>
+        <div class="wwa-tags">
+          <span class="wwa-tag">full-stack development</span>
+          <span class="wwa-tag">mobile &amp; web systems</span>
+          <span class="wwa-tag">ai &amp; machine learning</span>
+          <span class="wwa-tag">enterprise engineering</span>
+          <span class="wwa-tag">team leadership</span>
+          <span class="wwa-tag">production software</span>
         </div>
       </div>
     </section>
