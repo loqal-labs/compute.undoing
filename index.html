@@ -6,7 +6,6 @@
     <title>
       Undoing Compute — CS Mentorship for Middle & High School Students
     </title>
-    <!-- Open Graph (used by Facebook, iMessage, LinkedIn, etc.) -->
     <meta
       property="og:title"
       content="Undoing Compute — CS Mentorship for Students"
@@ -59,9 +58,7 @@
         --toggle-icon: #6b6760;
         --footer-text: rgba(15, 14, 12, 0.35);
         --quote-bg: #ede8dd;
-        --step-line: rgba(15, 14, 12, 0.12);
       }
-
       [data-theme="dark"] {
         --bg: #0f0e0c;
         --bg-nav: #0f0e0c;
@@ -82,7 +79,6 @@
         --toggle-icon: #8a8680;
         --footer-text: rgba(245, 240, 232, 0.25);
         --quote-bg: #191714;
-        --step-line: rgba(245, 240, 232, 0.12);
       }
 
       html {
@@ -146,9 +142,6 @@
         color: var(--text-muted);
         text-transform: lowercase;
         cursor: default;
-      }
-      .wordmark span {
-        color: var(--text-muted);
       }
       .nav-links {
         display: flex;
@@ -244,6 +237,8 @@
           background 0.3s,
           color 0.3s;
         white-space: nowrap;
+        cursor: pointer;
+        border: none;
       }
       .nav-cta:hover {
         opacity: 0.82;
@@ -317,6 +312,9 @@
           opacity 0.25s,
           background 0.3s,
           color 0.3s;
+        cursor: pointer;
+        border: none;
+        display: inline-block;
       }
       .btn-primary:hover {
         opacity: 0.82;
@@ -356,14 +354,13 @@
         transition: color 0.3s;
       }
 
-      /* ── Testimonials strip ── */
+      /* ── Testimonials ── */
       .testimonials {
         background: var(--bg-section-alt);
         border-bottom: 0.5px solid var(--border);
         padding: 3rem;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: 0;
         transition:
           background 0.3s,
           border-color 0.3s;
@@ -433,7 +430,6 @@
       .steps {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        gap: 0;
         border: 0.5px solid var(--border);
         transition: border-color 0.3s;
       }
@@ -532,8 +528,6 @@
         grid-template-columns: 1fr 1.6fr;
         gap: 6rem;
         transition: border-color 0.3s;
-      }
-      .why-left {
       }
       .why-left-title {
         font-family: "Cormorant Garamond", Georgia, serif;
@@ -690,7 +684,6 @@
         color: var(--text-muted);
         flex-shrink: 0;
         padding-top: 1px;
-        transition: color 0.3s;
       }
       .pricing-cta {
         display: block;
@@ -706,10 +699,14 @@
           opacity 0.25s,
           background 0.3s,
           color 0.3s;
+        cursor: pointer;
+        border: none;
+        width: 100%;
       }
       .pricing-cta-ghost {
         color: var(--text-primary);
         border: 0.5px solid var(--border-med);
+        background: transparent;
       }
       .pricing-cta-ghost:hover {
         background: var(--tag-bg);
@@ -731,7 +728,7 @@
         transition: color 0.3s;
       }
 
-      /* ── Closing CTA ── */
+      /* ── Closing ── */
       .closing {
         padding: 5.5rem 3rem;
         border-bottom: 0.5px solid var(--border);
@@ -859,7 +856,7 @@
           gap: 0.65rem;
           align-items: center;
         }
-        .ncta {
+        .nav-cta {
           display: none;
         }
         .nav-links {
@@ -941,7 +938,6 @@
     </style>
   </head>
   <body>
-    <!-- Nav -->
     <nav>
       <div class="nav-left">
         <div class="wordmark-wrap">
@@ -988,13 +984,17 @@
             ><span class="label-dark">dark</span></span
           >
         </button>
-        <a class="nav-cta" href="#" data-cal-link="loqal-labs-otowdy/30min"
-          >book a session</a
+        <button
+          class="nav-cta"
+          data-cal-link="loqal-labs-otowdy/30min"
+          data-cal-namespace="30min"
+          data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'
         >
+          book a session
+        </button>
       </div>
     </nav>
 
-    <!-- Hero -->
     <section class="hero">
       <div class="hero-inner">
         <div class="hero-badge">
@@ -1011,12 +1011,14 @@
           best.
         </p>
         <div class="hero-actions">
-          <a
+          <button
             class="btn-primary"
-            href="#"
             data-cal-link="loqal-labs-otowdy/30min"
-            >book a free intro session</a
+            data-cal-namespace="30min"
+            data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'
           >
+            book a free intro session
+          </button>
           <a class="btn-ghost" href="#how">see how it works</a>
         </div>
         <div class="hero-meta">
@@ -1074,7 +1076,6 @@
       </div>
     </section>
 
-    <!-- Testimonials -->
     <section class="testimonials">
       <div class="testimonial">
         <p class="testimonial-quote">
@@ -1101,7 +1102,6 @@
       </div>
     </section>
 
-    <!-- How it works -->
     <section class="how" id="how">
       <div class="section-header">
         <h2 class="section-title">Here's how it works</h2>
@@ -1143,7 +1143,6 @@
       </div>
     </section>
 
-    <!-- Who it's for -->
     <section class="for-whom" id="who">
       <div class="section-header">
         <h2 class="section-title">Who it's for</h2>
@@ -1222,7 +1221,6 @@
       </div>
     </section>
 
-    <!-- Why different -->
     <section class="why">
       <div class="why-left">
         <h2 class="why-left-title">Why we teach differently</h2>
@@ -1230,7 +1228,6 @@
           Most programs teach students to follow steps. We teach them to think
           through problems independently.
         </p>
-
         <p class="why-left-body" style="margin-top: 1rem">
           The goal is not memorizing syntax — it is building clarity, intuition,
           and confidence in how systems work.
@@ -1275,7 +1272,6 @@
       </div>
     </section>
 
-    <!-- Pricing -->
     <section class="pricing" id="pricing">
       <div class="section-header">
         <h2 class="section-title">Simple, transparent pricing</h2>
@@ -1295,12 +1291,14 @@
             <li>Project-based curriculum</li>
             <li>Session notes after every meeting</li>
           </ul>
-          <!-- <a
+          <button
             class="pricing-cta pricing-cta-ghost"
-            href="#"
             data-cal-link="loqal-labs-otowdy/30min"
-            >get started</a
-          > -->
+            data-cal-namespace="30min"
+            data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'
+          >
+            get started
+          </button>
         </div>
         <div class="pricing-card featured">
           <span class="pricing-badge">most popular</span>
@@ -1316,11 +1314,14 @@
             <li>Project-based curriculum</li>
             <li>Session notes + async Q&amp;A between sessions</li>
           </ul>
-          <!-- <a
+          <button
             class="pricing-cta pricing-cta-solid"
-            href="mailto:hello@undoing.dev"
-            >book intro session</a
-          > -->
+            data-cal-link="loqal-labs-otowdy/30min"
+            data-cal-namespace="30min"
+            data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'
+          >
+            book intro session
+          </button>
         </div>
       </div>
       <p class="pricing-note">
@@ -1329,28 +1330,31 @@
       </p>
     </section>
 
-    <!-- Closing CTA -->
     <section class="closing">
       <div class="closing-left">
         <p class="closing-eyebrow">ready to start?</p>
         <h2 class="closing-hed">The first session is free.</h2>
         <p class="closing-body">
           The first session is a real working session. We understand your
-          student’s goals, how they think, and what they can build next. If it’s
+          student's goals, how they think, and what they can build next. If it's
           a fit, we create a simple learning plan together.
         </p>
       </div>
       <div class="closing-right">
-        <a class="btn-primary" href="#" data-cal-link="loqal-labs-otowdy/30min"
-          >book a free intro session</a
+        <button
+          class="btn-primary"
+          data-cal-link="loqal-labs-otowdy/30min"
+          data-cal-namespace="30min"
+          data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'
         >
+          book a free intro session
+        </button>
         <a class="btn-ghost" href="https://undoing.dev"
           >learn about undoing →</a
         >
       </div>
     </section>
 
-    <!-- Footer -->
     <footer>
       <div class="footer-left">
         <p class="footer-copy">© 2025 undoing labs</p>
@@ -1380,7 +1384,8 @@
         if (saved) document.documentElement.setAttribute("data-theme", saved);
       } catch (e) {}
     </script>
-    <!-- Cal element-click embed code begins -->
+
+    <!-- Cal.com embed -->
     <script type="text/javascript">
       (function (C, A, L) {
         let p = function (a, ar) {
@@ -1414,18 +1419,12 @@
             p(cal, ar);
           };
       })(window, "https://app.cal.com/embed/embed.js", "init");
+
       Cal("init", "30min", { origin: "https://app.cal.com" });
-
-      // Important: Please add the following attributes to the element that should trigger the calendar to open upon clicking.
-      // `data-cal-link="loqal-labs-otowdy/30min"`
-      // data-cal-namespace="30min"
-      // `data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'`
-
       Cal.ns["30min"]("ui", {
         hideEventTypeDetails: false,
         layout: "month_view",
       });
     </script>
-    <!-- Cal element-click embed code ends -->
   </body>
 </html>
